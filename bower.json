@@ -1,0 +1,29 @@
+{
+  "name": "angular-mailchimp",
+  "main": "angular-mailchimp.js",
+  "version": "0.0.1",
+  "authors": {
+    "name": "Keith Hall",
+    "web": "http://keith.io"
+  },
+  "description": "Angular controller for facilitating MailChimp subscription.",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "mailchimp"
+  ],
+  "license": "MIT",
+  "homepage": "http://keithio.github.io/angular-mailchimp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.9",
+    "angular-resource": "~1.2.9",
+    "angular-sanitize": "~1.2.9"
+  }
+}
