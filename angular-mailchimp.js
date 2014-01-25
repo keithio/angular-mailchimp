@@ -51,7 +51,11 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
           // Mailchimp returned an error.
           if (response.result === 'error') {
             if (response.msg) {
-              mailchimp.errorMessage = response.msg;
+              // Remove error numbers, if any.
+              var errorMessageParts = response.msg.split(' - ');
+              if (errorMessageParts.length > 1)
+                errorMessageParts.shift(); // Remove the error number
+              mailchimp.errorMessage = errorMessageParts.join(' ');
             } else {
               mailchimp.errorMessage = 'Sorry! An unknown error occured.';
             }
