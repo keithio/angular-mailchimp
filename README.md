@@ -30,7 +30,7 @@ angular.module('myApp', ['mailchimp']);
 You must obtain the following information from the form action attribute code:
 
 * `mailchimp.username` - Your MailChimp username, immediately follows `http://`
-* `mailchimp.dc` - Your MailChimp distribution center, immpediately follows your username
+* `mailchimp.dc` - Your MailChimp distribution center, immediately follows your username
 * `mailchimp.u` - Unique string that identifies your account. It is obtained from 
 * `mailchimp.id` - A unique string that identifies your list.
 
