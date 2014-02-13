@@ -18,6 +18,10 @@ And add `mailchimp` as a dependency for your app:
 angular.module('myApp', ['mailchimp']);
 ```
 
+# Justification of Method
+
+Instead of relying on a resource or a service, I chose to make this module as reusable as possible. This means that all configuration is done in the [HTML shown below](https://github.com/keithio/angular-mailchimp#usage). So, you can have one page with as many subscription forms as you'd like as long as you [configure](https://github.com/keithio/angular-mailchimp#configuration) everything properly.
+
 # Configuration
 
 1. Log into your Mailchimp Account
