@@ -21,7 +21,7 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
           url;
 
       // Create a resource for interacting with the MailChimp API
-      url = 'http://' + mailchimp.username + '.' + mailchimp.dc + '.list-manage.com/subscribe/post-json';
+      url = '//' + mailchimp.username + '.' + mailchimp.dc + '.list-manage.com/subscribe/post-json';
       params = {
         'EMAIL': mailchimp.email,
         'FNAME': mailchimp.fname,
