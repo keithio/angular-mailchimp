@@ -67,7 +67,6 @@ those you obtained:
     <input type="text" name="lname" ng-model="mailchimp.lname" placeholder="Last name">
     <input type="email" name="email" ng-model="mailchimp.email" placeholder="Email address" required>
     <button ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">Join</button>
-    </div>
   </div>
 
   <!-- Show error message if MailChimp unsuccessfully added the email to the list. -->
