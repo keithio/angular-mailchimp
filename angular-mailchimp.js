@@ -17,19 +17,19 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
     $scope.addSubscription = function (mailchimp) {
       var actions,
           MailChimpSubscription,
-          params,
+          params = {},
           url;
 
       // Create a resource for interacting with the MailChimp API
       url = '//' + mailchimp.username + '.' + mailchimp.dc + '.list-manage.com/subscribe/post-json';
-      params = {
-        'EMAIL': mailchimp.email,
-        'FNAME': mailchimp.fname,
-        'LNAME': mailchimp.lname,
-        'c': 'JSON_CALLBACK',
-        'u': mailchimp.u,
-        'id': mailchimp.id
-      };
+
+      var fields = Object.keys(mailchimp);
+
+      for(var i = 0; i < fields.length; i++) {
+        params[fields[i]] = mailchimp[fields[i]];
+      }
+      params.c = 'JSON_CALLBACK';
+      
       actions = {
         'save': {
           method: 'jsonp'
