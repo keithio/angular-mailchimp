@@ -81,6 +81,11 @@ those you obtained:
 </form>
 ```
 
+# Custom Fields
+You also have the option to include extra fields in your subscription form.
+For example, you can pass a phone number to MailChimp by providing a value for
+``mailchimp.phone``.
+
 # License
 
 The MIT License
