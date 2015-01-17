@@ -21,13 +21,15 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
           url;
 
       // Create a resource for interacting with the MailChimp API
-      url = '//' + mailchimp.username + '.' + mailchimp.dc + '.list-manage.com/subscribe/post-json';
+      url = '//' + mailchimp.username + '.' + mailchimp.dc +
+            '.list-manage.com/subscribe/post-json';
 
       var fields = Object.keys(mailchimp);
 
       for(var i = 0; i < fields.length; i++) {
         params[fields[i]] = mailchimp[fields[i]];
       }
+
       params.c = 'JSON_CALLBACK';
       
       actions = {
