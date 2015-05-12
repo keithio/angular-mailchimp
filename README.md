@@ -63,9 +63,9 @@ those you obtained:
     <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us1'">
     <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='a1b2c3d4e5f6g7h8i9j0'">
     <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='aabb12'">
-    <input type="text" name="fname" ng-model="mailchimp.fname" placeholder="First name">
-    <input type="text" name="lname" ng-model="mailchimp.lname" placeholder="Last name">
-    <input type="email" name="email" ng-model="mailchimp.email" placeholder="Email address" required>
+    <input type="text" name="fname" ng-model="mailchimp.FNAME" placeholder="First name">
+    <input type="text" name="lname" ng-model="mailchimp.LNAME" placeholder="Last name">
+    <input type="email" name="email" ng-model="mailchimp.EMAIL" placeholder="Email address" required>
     <button ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">Join</button>
   </div>
 
