@@ -11,8 +11,8 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
   /**
    * Form controller for a new Mailchimp subscription.
    */
-  .controller('MailchimpSubscriptionCtrl', ['$log', '$resource', '$scope',
-              function ($log, $resource, $scope) {
+  .controller('MailchimpSubscriptionCtrl', ['$log', '$resource', '$scope', '$rootScope',
+              function ($log, $resource, $scope, $rootScope) {
     // Handle clicks on the form submission.
     $scope.addSubscription = function (mailchimp) {
       var actions,
@@ -31,7 +31,7 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
       }
 
       params.c = 'JSON_CALLBACK';
-      
+
       actions = {
         'save': {
           method: 'jsonp'
@@ -66,6 +66,9 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
           else if (response.result === 'success') {
             mailchimp.successMessage = response.msg;
           }
+
+          //Broadcast the result for global msgs
+          $rootScope.$broadcast('mailchimp-response', response.result, response.msg);
         },
 
         // Error sending data to MailChimp
