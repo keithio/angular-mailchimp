@@ -1,7 +1,7 @@
 {
   "name": "angular-mailchimp",
   "main": "angular-mailchimp.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "authors": {
     "name": "Keith Hall",
     "web": "http://keith.io"
