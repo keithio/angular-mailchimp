@@ -46,10 +46,10 @@ Example::
 
 Result:
 
-* `mailchimp.username` - `username`
-* `mailchimp.dc` - `us1`
-* `mailchimp.u` - `a1b2c3d4e5f6g7h8i9j0`
-* `mailchimp.id` - `aabb12`
+* `mailchimp.username = 'username'`
+* `mailchimp.dc = 'us1'`
+* `mailchimp.u = 'a1b2c3d4e5f6g7h8i9j0'`
+* `mailchimp.id = 'aabb12'`
 
 # Usage
 
