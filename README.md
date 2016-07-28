@@ -9,6 +9,8 @@ bower install angular-mailchimp
 Add a `<script>` to your `index.html`:
 
 ```html
+<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="/bower_components/angular-mailchimp/angular-mailchimp.js"></script>
 ```
 
